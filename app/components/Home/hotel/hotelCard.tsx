@@ -1,16 +1,11 @@
 import React from 'react'
 import { FaHeart } from 'react-icons/fa';
- type Props = {
-    hotel: {
-        id: number;
-        name: string;
-        image: string;
-        location: string;
-        price: number;
-        rating: number;
-        reviews: number;
-    };
+import { Hotel } from '@/app/data/data'
+
+type Props = {
+    hotel: Hotel;
 };
+
 function HotelCard({ hotel }: Props) {
   return (
     <div>
@@ -24,10 +19,10 @@ function HotelCard({ hotel }: Props) {
         <h3 className='mt-4 text-lg font-semibold text-blue-900 hover:text-black cursor-pointer transition-all duration-200'>{hotel.name}</h3>
         <p className='text-sm text-gray-600 mt-3 font-medium mb-6'>{hotel.location}</p>
        <div className='flex items-center space-x-2'>
-        <div className='px-2 py-2 bg-blue-800 rounded-md font-bold text-white text-xs'>Rating: {hotel.rating} ({hotel.reviews} reviews)</div>
+        <div className='px-2 py-2 bg-blue-800 rounded-md font-bold text-white text-xs'>Rating: {hotel.rating} ({hotel.reviews.toLocaleString()} reviews)</div>
         </div>
         <p className=' mt-4 text-sm text-gray-800'>Exeptional</p>
-        <p className='text-sm text-gray-800 font-bold'>{hotel.reviews} reviews</p>
+        <p className='text-sm text-gray-800 font-bold'>{hotel.reviews.toLocaleString()} reviews</p>
 
         </div>
         <p className='mt-3 text-sm text-gray-800 font-medium '> starting from <span className='text-blue-600 font-bold'>US${hotel.price}</span> </p>

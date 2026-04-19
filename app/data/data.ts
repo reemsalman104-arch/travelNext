@@ -115,15 +115,24 @@ export const destinationdata=[{
     travelers:'250,000'
 },]
 
+export type Hotel = {
+    id: number;
+    image: string;
+    name: string;
+    location: string;
+    price: number;
+    rating: number;
+    reviews: number;
+};
 
-export const hotelsdata=[{
+export const hotelsdata: Hotel[] = [{
 id:6,
 image:'/images/fr.jfif',
 name:'hilton roma luxurary hotel palase',
 location:'vaticano prate, rome',
- rating:'4.6',
-    reviews: '1.050',
-    price:"40",
+    rating: 4.6,
+    reviews: 1050,
+    price: 40,
 
 
 
@@ -134,9 +143,9 @@ id:7,
 image:'/images/r.jfif',
 name:'hilton roma luxurary hotel palase',
 location:'vaticano prate, rome',
- rating:'4.6',
-    reviews: '1.050',
-    price:"40",
+    rating: 4.6,
+    reviews: 1050,
+    price: 40,
 
 
 
@@ -147,9 +156,9 @@ id:8,
 image:'/images/gr.jfif',
 name:'hilton roma luxurary hotel palase',
 location:'vaticano prate, rome',
- rating:'4.6',
-    reviews: '1.050',
-    price:"40",
+    rating: 4.6,
+    reviews: 1050,
+    price: 40,
 
 
 
@@ -160,9 +169,9 @@ id:9,
 image:'/images/qq.jfif',
 name:'hilton roma luxurary hotel palase',
 location:'vaticano prate, rome',
- rating:'4.6',
-    reviews: '1.050',
-    price:"40",
+    rating: 4.6,
+    reviews: 1050,
+    price: 40,
 
 
 
